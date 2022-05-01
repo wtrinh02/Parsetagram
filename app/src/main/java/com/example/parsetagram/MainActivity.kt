@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             val user = ParseUser.getCurrentUser()
             if(photoFile != null){
                 submitPost(description, user, photoFile!!)
+                Toast.makeText(this, "Posted!", Toast.LENGTH_SHORT).show()
             }else{
                 Log.e(TAG, "Error photoFile is null")
                 Toast.makeText(this, "Need to take picture!", Toast.LENGTH_SHORT).show()
